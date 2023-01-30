@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #efe9da;
+}
+
+.nav {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  font-size: 1.3vw;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+  border-bottom: 2px solid #7b7979;
+
+  }
+
+.ic-icon {
+  width: 11vw;
+  margin-right: 4vw;
+}
+
+.lists {
+  display: flex;
+  list-style: none;
+  min-width: 200px;
+  align-items: start;
+}
+
+.item-list {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #083a77;
+  padding: 1.5vw;
+  border: 3px solid rgb(13, 4, 41);
+  border-radius: 10px;
+}
+
+.shopping-list {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #6a6a02;
+  padding: 1.5vw;
+  border: 3px solid #272523;
+  border-radius: 10px;
+}
+
+.menu-list {
+  margin-right: 10vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #7d0509;
+  padding: 1.5vw;
+  border: 3px solid #50434f;
+  border-radius: 10px;
+}
+
+.user-nickname {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #3d3b3b;
+  padding: 1.5vw;
+  border: 3px solid #0c0c0c;
+  border-radius: 10px;
+}
+
+.logout {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3d3b3b;
+  padding: 1.5vw;
+  border: 3px solid #0c0c0c;
+  border-radius: 10px;
+}
+
+.login {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3d3b3b;
+  padding: 1.5vw;
+  border: 3px solid #0c0c0c;
+  border-radius: 10px;
+}
+
+.sign-up {
+  margin-right: 0.5vw;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3d3b3b;
+  padding: 1.5vw;
+  border: 3px solid #0c0c0c;
+  border-radius: 10px;
+}
+
+/* 検索バーのCSS */
+.search-bar {
+  margin: 1% 0 0 60%;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 50%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #489b4b;
+  padding: 8px;
+}
