@@ -41,10 +41,9 @@
 ## items テーブル
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| name              | string     | null: false, unique: true      |
+| name              | string     | null: false                    |
 | place_category_id | integer    | null: false                    |
 | memo              | text       |                                |
-| purchase_list_id  | integer    |                                |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
