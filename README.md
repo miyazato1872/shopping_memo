@@ -6,7 +6,7 @@
 | nickname              | string | null: false               |
 | email                 | string | null: false, unique: true |
 | password              | string | null: false               |
-| Introduction          | text   |                           |
+| introduction          | text   |                           |
 
 ### Association
 - has_many :items
