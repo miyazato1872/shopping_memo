@@ -10,6 +10,8 @@ a {
 .title-contents {
   width: 100vw;
   background-image: image-url('top.png');
+  background-color:rgba(255,255,255,0.2);
+  background-blend-mode:lighten;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
