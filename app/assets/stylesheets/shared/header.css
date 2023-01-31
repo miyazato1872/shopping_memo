@@ -118,13 +118,14 @@
   width: 100%;
   height: 5vh;
   display: flex;
-  margin: 3px 0 3px 0;
+  margin: 10px 0 2px 0;
 }
 
 .search-form>.input-box {
   width: 88%;
   height: 5vh;
   padding-left: 10px;
+  background-color: #edebe6;
 }
 
 .search-button {

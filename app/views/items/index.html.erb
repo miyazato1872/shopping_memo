@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+  <%# 画面上部の「効率よくお買い物」の帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
       <p>効率よくお買い物ができる</p>
@@ -18,22 +18,36 @@
       <%# <%= link_to image_tag("#", class:"google-btn"), "#" %>
     </div>
   </div>
-  <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+  <%# /画面上部の「効率よくお買い物」の帯部分  %>
 
-  <%# アイテム在庫の一覧 %>
+  <%# 在庫アイテム一覧の上部 %>
   <div class='item-contents'>
-    <h2 class='title'>アイテム一覧</h2>
-    <div class="subtitle" >
-      新規投稿商品
-    </div>
-    <ul class='item-lists'>
-
-    </ul>
+    <h2 class='title'>お家の在庫アイテム一覧</h2>
+    <a class="item-btn" href="#">在庫リストに追加</a>
+    <a class="shopping-save-btn" href="#">買い物リストに<p>追加して保存</p></a>
+    <div class="item-list-explanation">
+      <ul>
+        <li>・アイテム名をクリックすると詳細が確認できます。</li>
+        <li>・🎨マークを押すと文字が赤色になります。(在庫が少ないなどの区別)<p>　　※すぐに購入は必要ないが、特売などで検討購入</p></li>
+        <li>・同じアイテム名のものは登録できません。</li>
+      </ul>
   </div>
-  <%# /アイテム在庫の一覧 %>
+  <%#/ 在庫アイテム一覧の上部 %>
+
+<%# カテゴリ別の在庫リスト部分 %>
+  <div class="category-lists">
+    <%# <h1 class="category-name">冷蔵/冷凍食材</h1> %>
+  </div>
+<%# カテゴリ別の在庫リスト部分 %>
 </div>
-<%= link_to('#', class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>出品する</span>
+
+
+<%# furimaの時の右下固定の出品ボタンの部分 %>
+<%# <%= link_to('#', class: 'purchase-btn') do %> %>
+  <%# <span class='purchase-btn-text'>出品する</span> %>
   <%# <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %> %>
-<% end %>
+<%# <% end %> %>
+<%# furimaの時の右下固定の出品ボタンの部分 %>
+
+
 <%= render "shared/footer" %>
