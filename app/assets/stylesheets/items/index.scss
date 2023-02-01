@@ -45,10 +45,10 @@ a {
 .item-contents {
   width: 100%;
   padding: 2vw;
-  background-color: #efe9da;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  border-bottom:3px double #442b2b ;
 }
 
 .item-contents>.title {
@@ -91,10 +91,49 @@ a {
 //////////* 在庫アイテム一覧の上部 */////////////
 
 ////////// * カテゴリ別の在庫リスト部分 */////////
-.category-contents {
-}
-.category-title {
-  font-size: 2vw;
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.category-list {
+  width: 45%;
+  height: 45vw;
+  display: flex;
+  margin: 1%;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-contents {
+  width: 100%;
+  height: 90%;
+  margin: 3% 3% 7%;
+  background-color: #f3f1ed;
+  border: 1px solid #442b2b;
+  border-radius: 10px;
+}
+
+.category-title {
+  background-color: blanchedalmond;
+  color: black;
+  font-size: 2.5vw;
+  text-align: center;
+  border: 5px double #919191;
+  border-radius: 5px;
+  margin: 3% ;
+}
+
+.stock-items {
+  color: #545454;
+  text-decoration:underline 1.5px #515151;
+  height: 80%;
+  text-align: left;
+  padding: 3% 5%;
+  font-size: 1.5vw;
+  line-height:1.8;
+  overflow-x:scroll;
+}
 ////////// * カテゴリ別の在庫リスト部分 */////////

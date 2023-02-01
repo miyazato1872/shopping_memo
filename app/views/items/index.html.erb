@@ -20,10 +20,10 @@
   <div class='item-contents'>
     <h2 class='title'>お家の在庫アイテム一覧</h2>
       <%= link_to  "#", class: "item-btn" do %>
-        在庫リストに<br>追加
+        在庫リストに<br>商品を登録
       <% end %>
       <%= link_to  "#", class: "shopping-save-btn" do %>
-        買い物リストに<br>追加して保存
+        買い物メモに<br>追加して保存
       <% end %>
     <div class="item-list-explanation">
       <ul>
@@ -36,23 +36,98 @@
   <%#/ 在庫アイテム一覧の上部 %>
 
   <%# カテゴリ別の在庫リスト部分 %>
-  <div class='category-contents'>
-    <h2 class='category-title'>冷蔵/冷凍食材</h2>
-    <ul>
-      <li>aaa</li>
-      <li>bbb</p></li>
-      <li>ccc</li>
-    </ul>
+  <div class="category">
+    <div class="category-list">
+      <div class='category-contents'>
+        <div class='category-title'>
+          <h1>冷蔵/冷凍食材</h1>
+        </div>
+        <ul class="stock-items">
+          <li >・テストテストテストテストテストテストテスト</li>
+          <li >・111111ああああああああああああああああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・111111ああああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・111111あああああああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+          <li >・1ああああ</li>
+          <li >・111111ああああああああああああああああああああ</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="category-list">
+      <div class='category-contents'>
+        <div class='category-title'>
+          <h1>冷蔵/冷凍食材</h1>
+        </div>
+        <ul class="stock-items">
+          <li >テストテストテストテストテストテストテスト</li>
+          <li >111111ああああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <%# カテゴリ別の在庫リスト部分 %>
+
+  <div class="category">
+    <div class="category-list">
+      <div class='category-contents'>
+        <div class='category-title'>
+          <h1>冷蔵/冷凍食材</h1>
+        </div>
+        <ul class="stock-items">
+          <li >テストテストテストテストテストテストテスト</li>
+          <li >111111ああああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="category-list">
+      <div class='category-contents'>
+        <div class='category-title'>
+          <h1>冷蔵/冷凍食材</h1>
+        </div>
+        <ul class="stock-items">
+          <li >テストテストテストテストテストテストテスト</li>
+          <li >111111ああああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+          <li >111111ああああああああああああああああああああ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <%# furimaの時の右下固定の出品ボタンの部分 %>
-<%# <%= link_to('#', class: 'purchase-btn') do %> %>
+<%# <%= link_to('#', class: 'purchase-btn') do %>
   <%# <span class='purchase-btn-text'>出品する</span> %>
-  <%# <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %> %>
-<%# <% end %> %>
+  <%# <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<%# <% end %>
 <%# furimaの時の右下固定の出品ボタンの部分 %>
 
 
