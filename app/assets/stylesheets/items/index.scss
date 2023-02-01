@@ -4,6 +4,7 @@ a {
 
 .main {
   background: #f8f8f8;
+  ;
 }
 
 /* 「効率よくお買い物」の帯部分 */
@@ -29,7 +30,7 @@ a {
 }
 
 .service-explain {
-  font-size: 2.5vh;
+  font-size: 1.5vw;
   line-height: 30px;
 }
 
@@ -42,57 +43,58 @@ a {
 
 //////////* 在庫アイテム一覧の上部 */////////////
 .item-contents {
-  background-color: #cdcac4;
+  width: 100%;
+  padding: 2vw;
+  background-color: #efe9da;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 2vw 0 100vh 0;
 }
 
 .item-contents>.title {
   font-size: 2.5vw;
   font-weight: bold;
   margin-left: 2vw;
-  padding: 0.2vw 3vw 0 0  ;
+  padding: 0.2vh  0 0  ;
 }
 
 .item-contents>.item-btn {
-  font-size: 2.5vh;
+  font-size: 1.2vw;
   font-weight: bold;
   background-color: aqua;
   color: #FFF;
   margin-left: 1vw;
-  padding: 3% 0.5vw;
+  padding: 1em;
   border-radius: 8px;
   text-align:center;
-
 }
 
 .item-contents>.shopping-save-btn {
-  font-size: 2.5vh;
+  font-size: 1.2vw;
   line-height: 1.5;
   font-weight: bold;
   background-color: rgb(222, 148, 12);
   color: #FFF;
-  margin-left: 1%;
-  padding: 1.8% 0.5vw ;
+  margin-left: 1vw;
+  padding: 1em;
   border-radius: 8px;
   text-align:center;
 }
 
 .item-contents>.item-list-explanation {
-  font-size: 2vh;
+  font-size: 1.2vw;
   line-height: 1.5;
   font-weight: bold;
-  margin-left: 1%;
+  margin-left: 1vw;
   justify-content: center;
 }
 //////////* 在庫アイテム一覧の上部 */////////////
 
 ////////// * カテゴリ別の在庫リスト部分 */////////
-.category-lists{
+.category-contents {
 }
-.category-lists>.category-name {
+.category-title {
+  font-size: 2vw;
 }
 
 ////////// * カテゴリ別の在庫リスト部分 */////////
