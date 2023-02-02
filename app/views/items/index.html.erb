@@ -2,18 +2,20 @@
 <div class='main'>
 
   <%# 画面上部の「効率よくお買い物」の帯部分 %>
-  <div class='title-contents'>
-    <h2 class='service-title'>
-      <p>効率よくお買い物ができる</p>
-      <p>在庫管理 & メモアプリ</p>
-    </h2>
-    <p class='service-explain'>
-      出かける前の3分で　気づいた時の1分で
-    </p>
-    <p class='service-explain'>
-      シンプルで素早くチェック
-    </p>
-  </div>
+  <% unless user_signed_in? %>
+    <div class='title-contents'>
+      <h2 class='service-title'>
+        <p>効率よくお買い物ができる</p>
+        <p>在庫管理 & メモアプリ</p>
+      </h2>
+      <p class='service-explain'>
+        出かける前の3分で　気づいた時の1分で
+      </p>
+      <p class='service-explain'>
+        シンプルで素早くチェック
+      </p>
+    </div>
+  <% end %>
   <%# /画面上部の「効率よくお買い物」の帯部分  %>
 
   <%# 在庫アイテム一覧の上部 %>
@@ -113,7 +115,26 @@
       </div>
     </div>
   </div>
+
+  <div class='purchase-contents'>
+    <h2 class='title'>買い物メモ一覧</h2>
+      <%= link_to  "#", class: "purchase-end-btn" do %>
+        買い物を終了<br>して更新
+      <% end %>
+      <%= link_to  "#", class: "shopping-save-btn" do %>
+        ここはまだ<br>未定
+      <% end %>
+    <div class="purchase-list-explanation">
+      <ul>
+        <li>・samplesamplesamplesamplesamplesamplesamplesample</li>
+        <li>・samplesamplesamplesamplesamplesamplesamplesample</li>
+        <li>・samplesamplesamplesamplesamplesamplesamplesample</li>
+      </ul>
+    </div>
+  </div>
+
 </div>
+
 
 
 <%# furimaの時の右下固定の出品ボタンの部分 %>
