@@ -44,39 +44,33 @@
           <h1>冷蔵/冷凍食材</h1>
         </div>
         <ul class="stock-items">
-          <li >🔲 🎨　トマト</li>
-          <li >🔲 🎨　牛乳</li>
-          <li >🔲 🎨　豆腐</li>
-          <li >🔲 🎨　チョコレート</li>
-          <li >🔲 🎨　納豆</li>
-          <li >🔲 🎨　ハム</li>
-          <li >🔲 🎨　アイス</li>
-          <li >🔲 🎨　冷凍パスタ</li>
-          <li >🔲 🎨　冷凍チャーハン</li>
-          <li >🔲 🎨　鶏肉</li>
-          <li >🔲 🎨　キムチ</li>
-          <li >🔲 🎨　わさび</li>
-          <li >🔲 🎨　しょうが</li>
-          <li >🔲 🎨　からし</li>
-
+          <% @items.each do |item| %>
+            <div class="name">
+            <% if item.place_category_id == 2 && (user_signed_in? && current_user.id) == item.user_id %>
+            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
+              <span><%= item.name %></span>
+            <% else %>
+              <p><%= "" %></p>
+            <% end %>
+            </div>
+          <% end %>
         </ul>
       </div>
     </div>
-    
     <div class="category-list">
       <div class='category-contents'>
         <div class='category-title'>
           <h1>常温食材/消耗備品</h1>
         </div>
         <ul class="stock-items">
-          <li >🔲 🎨　お米</li>
-          <li >🔲 🎨　ポテトチップス</li>
-          <li >🔲 🎨　コーヒー豆</li>
-          <li >🔲 🎨　ほんだし</li>
-          <li >🔲 🎨　お茶パック</li>
-          <li >🔲 🎨　ラップ</li>
-          <li >🔲 🎨　キッチンペーパー</li>
-
+          <% @items.each do |item| %>
+            <div class="name">
+            <% if item.place_category_id == 3 && (user_signed_in? && current_user.id) == item.user_id %>
+            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
+              <span><%= item.name %></span>
+            <% end %>
+            </div>
+          <% end %>
         </ul>
       </div>
     </div>
@@ -89,12 +83,14 @@
           <h1>風呂/トイレ/洗面所</h1>
         </div>
         <ul class="stock-items">
-          <li >🔲 🎨　シャンプー</li>
-          <li >🔲 🎨　コンディショナー</li>
-          <li >🔲 🎨　ボディーソープ</li>
-          <li >🔲 🎨　洗濯洗剤</li>
-          <li >🔲 🎨　柔軟剤</li>
-          <li >🔲 🎨　トイレットペーパー</li>
+          <% @items.each do |item| %>
+            <div class="name">
+            <% if item.place_category_id == 4 && (user_signed_in? && current_user.id) == item.user_id %>
+            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
+              <span><%= item.name %></span>
+            <% end %>
+            </div>
+          <% end %>
         </ul>
       </div>
     </div>
@@ -105,15 +101,14 @@
           <h1>その他</h1>
         </div>
         <ul class="stock-items">
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
-          <li >🔲 🎨　サンプル</li>
+          <% @items.each do |item| %>
+            <div class="name">
+            <% if item.place_category_id == 5 && (user_signed_in? && current_user.id) == item.user_id %>
+            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
+              <span><%= item.name %></span>
+            <% end %>
+            </div>
+          <% end %>
         </ul>
       </div>
     </div>
