@@ -1,0 +1,20 @@
+<%= form_with model: @item, url:items_path, local: true do |f| %>
+  <div class="new-item">
+    <div class="weight-bold-text">
+      アイテム名
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :name, class:"name", placeholder:"アイテム名(重複した名称は登録不可)" %>
+    <div class="weight-bold-text">
+      カテゴリ
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:place_category_id, PlaceCategory.all, :id, :name, {}, {class:"place_category-select"}) %>
+    <div class="weight-bold-text">
+      備考メモ
+      <span class="dispensable">任意</span>
+    </div>
+    <%= f.text_area :memo, class:"text", placeholder:"備考欄(任意記載)" %>
+    <%= f.submit "登録する" ,class:"btn" %>
+  </div>
+<% end %>
