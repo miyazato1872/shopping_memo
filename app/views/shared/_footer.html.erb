@@ -1,45 +1,49 @@
 <%# 下部広告部分 %>
-<div class='ad-footer-contents'>
-  <p class='ad-footer-explain'>
-    だれでもかんたん、人生を変えるフリマアプリ
-  </p>
-  <h2 class='ad-footer-title'>
-    今すぐ無料ダウンロード！
-  </h2>
-  <div class='store-btn'>
-    <%# <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>  %>
-    <%# <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>  %>
+  <div class='purchase-contents'>
+    <h2 class='title'>買い物メモ一覧</h2>
+      <%= link_to  "#", class: "purchase-end-btn" do %>
+        買い物を終了<br>して更新
+      <% end %>
+      <%= link_to  "#", class: "shopping-save-btn" do %>
+        ここはまだ<br>未定
+      <% end %>
+    <div class="purchase-list-explanation">
+      <ul>
+        <li>・アイテム名をクリックすると詳細が確認できます。</li>
+        <li>・🎨マークを押すと文字が赤色になります。(在庫が少ないなどの区別)<br>　　※すぐに購入は必要しないが、特売などで検討購入</li>
+        <li>・同じアイテム名のものは登録できません。</li>
+      </ul>
+    </div>
   </div>
-</div>
 <%# /下部広告部分 %>
 
 <div class='footer'>
   <div class='footer-contents'>
     <div class='furima-details'>
-      <h2 class='footer-content-head'>FURIMAについて</h2>
+      <h2 class='footer-content-head'>#####について</h2>
       <ul>
         <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
         <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
-        <li><%= link_to 'FURIMA利用規約', "#", class: "footer-link" %></li>
+        <li><%= link_to '#####利用規約', "#", class: "footer-link" %></li>
         <li><%= link_to 'ポイントに関する特約', "#", class: "footer-link" %></li>
       </ul>
     </div>
     <div class='furima-details'>
-      <h2 class='footer-content-head'>FURIMAを見る</h2>
+      <h2 class='footer-content-head'>#####を見る</h2>
       <ul>
-        <li><%= link_to 'カテゴリー一覧', "#", class: "footer-link" %></li>
+        <li><%= link_to 'カテゴリ一覧', "#", class: "footer-link" %></li>
         <li><%= link_to 'ブランド一覧', "#", class: "footer-link" %></li>
       </ul>
     </div>
     <div class='furima-details'>
-      <h2 class='footer-content-head'>FURIMAについて</h2>
+      <h2 class='footer-content-head'>#####について</h2>
       <ul>
-        <li><%= link_to 'FURIMAガイド', "#", class: "footer-link" %></li>
-        <li><%= link_to 'FURIMAロゴ利用ガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to '#####ガイド', "#", class: "footer-link" %></li>
+        <li><%= link_to '#####ロゴ利用ガイドライン', "#", class: "footer-link" %></li>
         <li><%= link_to 'お知らせ', "#", class: "footer-link" %></li>
       </ul>
     </div>
   </div>
-  <%# <%= link_to image_tag("furima-logo-white.png", class:"logo-white"), "#" %> %>
-  <p>© FURIMA</p>
+  <%= link_to image_tag("ic-logo.png", class:"logo-white"), "/" %>
+  <p>© #####</p>
 </div>
