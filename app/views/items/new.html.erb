@@ -17,4 +17,10 @@
     <%= f.text_area :memo, class:"text", placeholder:"備考欄(任意記載)" %>
     <%= f.submit "登録する" ,class:"btn" %>
   </div>
+
+  <div class="item-footer-bar">
+    <%= link_to root_path, class: "return-btn" do %>
+        登録せずに前の画面に戻る
+    <% end %>
+  </div>
 <% end %>

@@ -20,13 +20,24 @@
 
   <%# 在庫アイテム一覧の上部 %>
   <div class='item-contents'>
-    <h2 class='title'>お家の在庫アイテム一覧</h2>
+    <h2 class='title'>
+      お家の在庫アイテム一覧
+    </h2>
+    <% if user_signed_in? %>
       <%= link_to new_item_path, class: "item-btn" do %>
         在庫リストに<br>商品を登録
       <% end %>
       <%= link_to "#", class: "shopping-save-btn" do %>
         買い物メモに<br>追加して保存
       <% end %>
+    <% else %>
+      <%= link_to "#", class: "item-btn" do %>
+        在庫リストに<br>商品を登録<br>
+      <% end %>
+      <%= link_to "#", class: "shopping-save-btn" do %>
+        買い物メモに<br>追加して保存
+      <% end %>
+    <% end %>
     <div class="item-list-explanation">
       <ul>
         <li>・🔲にチェックをつけて保存すると、買い物メモに追加されます</li>
