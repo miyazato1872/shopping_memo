@@ -43,7 +43,7 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 
 # データベース設計(ER図)
-[![Image from Gyazo](https://i.gyazo.com/acc4fc28c3147f16c0c4b98822c756c1.png)](https://gyazo.com/acc4fc28c3147f16c0c4b98822c756c1)
+[![Image from Gyazo](https://i.gyazo.com/2e1c0d143d1ffc921463aee7da511e38.png)](https://gyazo.com/2e1c0d143d1ffc921463aee7da511e38)
 
 # 画面遷移図
 - 献立機能については追加実装のため遷移図に記載しておりません  
@@ -52,21 +52,27 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 # 開発環境
 - VSCode
+- Ruby
+- Ruby on Rails
+- HTML
+- CSS
 - Render
-- MYSQL
+- MYSQL  
+- Git/GitHub/GitHub Desktop
 
 ※今後使用予定の開発環境
 - PostgreSQL
+- JavaScript
 
 # 工夫したポイント
-背景と重複している部分もありますが、『使い勝手がシンプルで継続して使用できること』を意識した機能実装を進めております。  
+背景と重複している部分もありますが、『使い勝手がシンプルで継続して使用できること』を重視した機能実装を進めております。  
 メモ機能、在庫管理機能でそれぞれ既存サービスは存在しますが、複合した上でシンプルに操作できるものは少ないと思われます。  
-また、追加実装においてはまずは2点考えております。  
+また、追加実装においては以下のような機能を考えております。  
 1. ユーザーが利用する場面ではパソコンではなくスマートフォンでの利用が主になるため、レスポンシブデザインにしていくことと  
 2. ajaxでポップアップ機能を実装して、ブラウザ操作を円滑にすること  
-  
+3. 献立週次カレンダー作成機能を作成し、1週間の献立で使用する食材と買い物リストが複合するような機能の実装
 
-  
+
 
 # テーブル設計
 
@@ -81,30 +87,20 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 ### Association
 - has_many :items
 - has_many :menus
-- has_one :purchase_list
+- has_one :purchase
 - has_one_attached :image
 
 
-## purchase_lists テーブル
+## purchase テーブル
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | user              | references | null: false, foreign_key: true |
+| item              | references | null: false, foreign_key: true |
+
 
 ### Association
 - belongs_to :user
-- has_many : item_purchase_lists
-- has_many : items, through: :item_purchase_lists
-
-
-## item_purchase_lists テーブル(中間テーブル)
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| item          | references | null: false, foreign_key: true |
-| purchase_list | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :item
-- belongs_to :purchase_list
+- has_many : items
 
 
 ## items テーブル
@@ -118,8 +114,7 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 ### Association
 - belongs_to :user
 - has_one_attached :image
-- has_many : item_purchase_lists
-- has_many : purchase_lists, through: :item_purchase_lists
+- belongs_to :purchase
 
 
 
