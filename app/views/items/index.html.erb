@@ -60,7 +60,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 2 && (user_signed_in? && current_user.id) == item.user_id %>
-            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
+            <%= check_box :item_purchase_list, :item_id, {class: "check_box"}, true, false %>
               <span><%= item.name %></span>
             <% else %>
               <p><%= "" %></p>
