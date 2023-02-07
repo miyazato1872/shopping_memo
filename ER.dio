@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="eWadbnz62wg29XNE3zge" name="案1">
-        <mxGraphModel dx="1540" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2270" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -70,7 +70,7 @@
                 <mxCell id="223" value="main_genre_id (プルダウン)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="218" vertex="1">
                     <mxGeometry y="86" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="224" value="user (外部キー)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="218" vertex="1">
+                <mxCell id="224" value="user (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="218" vertex="1">
                     <mxGeometry y="116" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="KgGAMbnghW-lA_S38_4V-237" value="【メモ】&lt;br&gt;&lt;br&gt;◆menusテーブルについて&lt;br&gt;&lt;span style=&quot;font-size: 14px; text-align: center;&quot;&gt;・purchase_listsには、1週間分のmenuのタイトルが表示されるようにする&lt;br&gt;そうすることで、買い物リストで「あ、あの食材は大丈夫かな？」の気づきができる&lt;br&gt;&lt;br&gt;◆追加実装で、itemsとmenusを紐づけて在庫管理できるようにする&lt;br&gt;&lt;br&gt;◆追加実装で、買い物で場所もプルダウンから選べるようにする。プルダウンに出す項目もユーザーが作成する仕様で&lt;br&gt;&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;rounded=0;shadow=0;glass=0;dashed=1;sketch=0;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fillColor=#B3B3B3;gradientColor=none;align=left;verticalAlign=top;" parent="1" vertex="1">
@@ -97,10 +97,10 @@
                 <mxCell id="KgGAMbnghW-lA_S38_4V-261" value="menu_tags" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;swimlaneLine=1;glass=0;shadow=0;fillColor=#FF33FF;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="-320" y="520" width="110" height="86" as="geometry"/>
                 </mxCell>
-                <mxCell id="KgGAMbnghW-lA_S38_4V-263" value="menu (外部キー)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="KgGAMbnghW-lA_S38_4V-261" vertex="1">
+                <mxCell id="KgGAMbnghW-lA_S38_4V-263" value="menu (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="KgGAMbnghW-lA_S38_4V-261" vertex="1">
                     <mxGeometry y="26" width="110" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="KgGAMbnghW-lA_S38_4V-262" value="tag  (外部キー)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="KgGAMbnghW-lA_S38_4V-261" vertex="1">
+                <mxCell id="KgGAMbnghW-lA_S38_4V-262" value="tag (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="KgGAMbnghW-lA_S38_4V-261" vertex="1">
                     <mxGeometry y="56" width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="KgGAMbnghW-lA_S38_4V-265" value="" style="endArrow=ERone;html=1;rounded=0;strokeWidth=2;fontColor=#F0F0F0;startSize=12;endSize=12;sourcePerimeterSpacing=0;endFill=0;startArrow=ERmany;startFill=0;entryX=1.007;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.116;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="KgGAMbnghW-lA_S38_4V-261" target="218" edge="1">
