@@ -101,7 +101,7 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 ### Association
 - [x] belongs_to :user
 - [x] has_many :item_shoppings
-- has_many :items, through: :shoppings
+- has_many :items, through: :item_shoppings
 
 
 ## item_shoppings テーブル(中間テーブル)
