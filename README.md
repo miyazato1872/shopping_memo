@@ -87,32 +87,32 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | introduction          | text   |                           |
 
 ### Association
-- has_many :items
-- has_many :menus
-- has_one :purchase_list
-- has_one_attached :image
+- [x] has_many :items
+- [ ] has_many :menus
+- [x] has_one :shopping
+- [ ] has_one_attached :image
 
 
-## purchases テーブル
+## shoppings テーブル
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- has_many : item_purchase_lists
-- has_many : items, through: :item_purchase_lists
+- [x] belongs_to :user
+- [x] has_many :item_shoppings
+- has_many :items, through: :shoppings
 
 
-## item_purchases テーブル(中間テーブル)
+## item_shoppings テーブル(中間テーブル)
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | item          | references | null: false, foreign_key: true |
-| purchase      | references | null: false, foreign_key: true |
+| shopping      | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :item
-- belongs_to :purchase
+- [x] belongs_to :item
+- [x] belongs_to :shopping
 
 
 ## items テーブル
@@ -124,12 +124,10 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | user              | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
+- [x] belongs_to :user
+- [x] has_many :item_shoppings
+- [x] has_many :shoppings, through: :item_shoppings
 - has_one_attached :image
-- has_many : item_purchase_lists
-- has_many : purchase_lists, through: :item_purchase_lists
-
-
 
 
 ## menus テーブル

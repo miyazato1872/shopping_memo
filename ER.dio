@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="eWadbnz62wg29XNE3zge" name="案1">
-        <mxGraphModel dx="2270" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1537" dy="333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -40,7 +40,7 @@
                 <mxCell id="dLK7wWNn38LidMxXqtx3-233" value="Active Storage" style="ellipse;whiteSpace=wrap;html=1;align=center;rounded=0;shadow=0;glass=0;dashed=1;sketch=0;strokeColor=#000000;strokeWidth=1;fontColor=#666666;fillColor=#FF99CC;gradientColor=none;" parent="205" vertex="1">
                     <mxGeometry y="146" width="160" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="213" value="purchases" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;swimlaneLine=1;glass=0;shadow=0;fillColor=#FF8000;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="213" value="shopping" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;swimlaneLine=1;glass=0;shadow=0;fillColor=#FF8000;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="-560" y="40" width="160" height="56" as="geometry"/>
                 </mxCell>
                 <mxCell id="KgGAMbnghW-lA_S38_4V-270" value="user 　(FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="213" vertex="1">
@@ -134,13 +134,13 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="225" value="item_purchases" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;swimlaneLine=1;glass=0;shadow=0;fillColor=#FF33FF;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="225" value="item_shoppings" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;rounded=0;swimlaneLine=1;glass=0;shadow=0;fillColor=#FF33FF;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="-563" y="150" width="163" height="86" as="geometry"/>
                 </mxCell>
                 <mxCell id="230" value="item (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="225" vertex="1">
                     <mxGeometry y="26" width="163" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="227" value="purchases (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="225" vertex="1">
+                <mxCell id="227" value="shopping (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="225" vertex="1">
                     <mxGeometry y="56" width="163" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="231" value="" style="endArrow=ERmany;html=1;rounded=0;strokeWidth=2;fontColor=#F0F0F0;startSize=12;endSize=12;sourcePerimeterSpacing=0;endFill=0;startArrow=ERone;startFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.504;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="205" target="227" edge="1">
