@@ -60,7 +60,6 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 2 && (user_signed_in? && current_user.id) == item.user_id %>
-            <%= check_box :item_purchase_list, :item_id, {class: "check_box"}, true, false %>
               <span><%= item.name %></span>
             <% else %>
               <p><%= "" %></p>
@@ -79,7 +78,6 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 3 && (user_signed_in? && current_user.id) == item.user_id %>
-            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
               <span><%= item.name %></span>
             <% end %>
             </div>
@@ -99,7 +97,6 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 4 && (user_signed_in? && current_user.id) == item.user_id %>
-            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
               <span><%= item.name %></span>
             <% end %>
             </div>
@@ -117,7 +114,6 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 5 && (user_signed_in? && current_user.id) == item.user_id %>
-            <%= check_box :item_purchase_lists, :item_id, {class: "check_box"}, true, false %>
               <span><%= item.name %></span>
             <% end %>
             </div>
