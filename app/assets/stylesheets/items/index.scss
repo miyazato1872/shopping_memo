@@ -81,14 +81,6 @@ a {
   border-radius: 8px;
   text-align:center;
 }
-
-.item-contents>.item-list-explanation {
-  font-size: 1.2vw;
-  line-height: 1.5;
-  font-weight: bold;
-  margin-left: 1vw;
-  justify-content: center;
-}
 //////////* 在庫アイテム一覧の上部 */////////////
 
 ////////// * カテゴリ別の在庫リスト部分 */////////
@@ -137,54 +129,8 @@ a {
   line-height:1.8;
   overflow-x:scroll;
 }
+
+.item-name {
+  text-decoration: none; color: #515151 ; 
+}
 ////////// * カテゴリ別の在庫リスト部分 */////////
-
-////////// * 買い物メモ一覧の部分 */////////
-.purchase-contents {
-  width: 100%;
-  padding: 2vw;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border-bottom:3px double #442b2b ;
-  border-top:3px double #442b2b ;
-}
-
-.purchase-contents>.title {
-  font-size: 2.5vw;
-  font-weight: bold;
-  margin: 0 8vw 0 2vw;
-  padding: 0.2vh  0 0  ;
-}
-
-.purchase-contents>.purchase-end-btn {
-  font-size: 1.2vw;
-  font-weight: bold;
-  background-color: aqua;
-  color: #FFF;
-  margin-left: 1vw;
-  padding: 1em;
-  border-radius: 8px;
-  text-align:center;
-}
-
-.purchase-contents>.shopping-save-btn {
-  font-size: 1.2vw;
-  line-height: 1.5;
-  font-weight: bold;
-  background-color: rgb(222, 148, 12);
-  color: #FFF;
-  margin-left: 1vw;
-  padding: 1em;
-  border-radius: 8px;
-  text-align:center;
-}
-
-.purchase-contents>.purchase-list-explanation {
-  font-size: 1.2vw;
-  line-height: 1.5;
-  font-weight: bold;
-  margin-left: 4vw;
-  justify-content: center;
-}
-////////// * 買い物メモ一覧の部分 */////////
