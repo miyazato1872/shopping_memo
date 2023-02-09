@@ -111,8 +111,8 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | shopping      | references | null: false, foreign_key: true |
 
 ### Association
-- [x] belongs_to :item
-- [x] belongs_to :shopping
+- belongs_to :item
+- belongs_to :shopping
 
 
 ## items テーブル
@@ -124,10 +124,13 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | user              | references | null: false, foreign_key: true |
 
 ### Association
-- [x] belongs_to :user
-- [x] has_many :item_shoppings
-- [x] has_many :shoppings, through: :item_shoppings
+- belongs_to :user
+- has_many :item_shoppings
+- has_many :shoppings, through: :item_shoppings
+- belongs_to :place_category
+
 - has_one_attached :image
+
 
 
 ## menus テーブル
