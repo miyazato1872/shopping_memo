@@ -27,16 +27,16 @@
       <%= link_to new_item_path, class: "item-btn" do %>
         在庫リストに<br>商品を登録
       <% end %>
-      <%# <%= link_to "#", class: "shopping-save-btn" do %>
-        <%# 買い物メモに<br>追加して保存 %>
-      <%# <% end %>
+      <%= link_to new_shopping_path, class: "shopping-save-btn" do %>
+        買い物メモを<br>作成する
+      <% end %>
     <% else %>
       <%= link_to "#", class: "item-btn" do %>
         在庫リストに<br>商品を登録<br>
       <% end %>
-      <%# <%= link_to "#", class: "shopping-save-btn" do %>
-        <%# 買い物メモに<br>追加して保存 %>
-      <%# <% end %>
+        <<%= link_to "#", class: "shopping-save-btn" do %>
+        買い物メモを<br>作成する
+      <% end %>
     <% end %>
   </div>
   <%#/ 在庫アイテム一覧の上部 %>
@@ -52,7 +52,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 2 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, new_shopping_path, class:"item-name"  %></span>
+              <span><%= link_to item.name, "#", class:"item-name"  %></span>
             <% else %>
               <p><%= "" %></p>
             <% end %>
@@ -70,7 +70,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 3 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, new_shopping_path, class:"item-name"  %></span>
+              <span><%= link_to item.name, "#", class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
@@ -89,7 +89,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 4 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, new_shopping_path, class:"item-name"  %></span>
+              <span><%= link_to item.name, "#", class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
@@ -106,7 +106,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 5 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, new_shopping_path, class:"item-name"  %></span>
+              <span><%= link_to item.name, "#", class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
