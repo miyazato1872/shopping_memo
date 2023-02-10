@@ -119,11 +119,8 @@
     <div class='name'>
       <% @items.each do |item| %>
         <% if (user_signed_in? && current_user.id == item.user_id) && (item.shopping == true)%>  <%#ログインしてて、ログインユーザー登録したアイテムだけで、尚且つチェックボックスにチェックをつけたアイテムだけ %>
-            <%= "◆#{item.name}" %><br>
+          ● <%= link_to item.name, edit_item_path(item.id) %><br>
         <% end %>
-      <% end %>
-      <%= form_with model: @item, url:items_path, local: true do |f| %>
-        <%= f.submit "更新して買い物を終わる" ,class:"btn" %>
       <% end %>
     </div>
   </div>

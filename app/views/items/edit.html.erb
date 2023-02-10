@@ -1,12 +1,16 @@
 <div class="weight-bold-text">
-    買い物リストへ保存
+  <%= "✔︎をつけたら【#{@item.name}】を買い物メモに追加" %><br>
+  <%= "✔︎を外したら【#{@item.name}】を買い物メモから削除" %>
 </div>
-<%= form_with model: @item, url:items_path, local: true do |f| %>
+
+
+<%= form_with model: @item, local: true do |f| %>
   <%= f.check_box :shopping %>
-  <%= f.submit "登録する" ,class:"btn" %>
-<% end %>
+  <%= f.submit "更新" ,class:"btn" %>
+<% end %><br>
+
 <div class="item-footer-bar">
   <%= link_to root_path, class: "return-btn" do %>
-      登録せずに前の画面に戻る
+      前の画面に戻る
   <% end %>
 </div>
