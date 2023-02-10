@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   # アソシエーション
   has_many :items
-  has_one :shopping
 
   # バリデーション
   validates :nickname, presence: true  # 空では登録できない

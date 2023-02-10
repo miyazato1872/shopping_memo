@@ -134,3 +134,26 @@ a {
   text-decoration: none; color: #515151 ; 
 }
 ////////// * カテゴリ別の在庫リスト部分 */////////
+
+////////// * 買い物メモリストの部分 */////////
+.shopping-contents {
+  width: 100%;
+  padding: 2vw;
+  border-bottom:3px double #442b2b ;
+  border-top:3px double #442b2b ;
+}
+
+.shopping-contents>.title {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin-left: 2vw;
+  padding: 0.2vh  0 0  ;
+}
+
+.shopping-contents>.name {
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  padding: 0.2vh  0 0  ;
+}
+
+////////// * 買い物メモリストの部分 */////////

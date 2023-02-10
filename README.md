@@ -74,8 +74,6 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 3. 献立週次カレンダー作成機能を作成し、1週間の献立で使用する食材と買い物リストが複合するような機能の実装
 
 
-  
-
 # テーブル設計
 
 ## users テーブル
@@ -87,33 +85,9 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | introduction          | text   |                           |
 
 ### Association
-- [x] has_many :items
-- [ ] has_many :menus
-- [x] has_one :shopping
-- [ ] has_one_attached :image
-
-
-## shoppings テーブル
-| Column            | Type       | Options                        |
-| ----------------- | ---------- | ------------------------------ |
-| user              | references | null: false, foreign_key: true |
-
-### Association
-- [x] belongs_to :user
-- [x] has_many :item_shoppings
-- has_many :items, through: :item_shoppings
-
-
-## item_shoppings テーブル(中間テーブル)
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| item          | references | null: false, foreign_key: true |
-| shopping      | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :item
-- belongs_to :shopping
-
+- has_many :items
+- has_many :menus
+- has_one_attached :image
 
 ## items テーブル
 | Column            | Type       | Options                        |
@@ -121,14 +95,12 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 | name              | string     | null: false                    |
 | place_category_id | integer    | null: false                    |
 | memo              | text       |                                |
+| checkbox          | boolean    |                                |
 | user              | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
-- has_many :item_shoppings
-- has_many :shoppings, through: :item_shoppings
 - belongs_to :place_category
-
 - has_one_attached :image
 
 

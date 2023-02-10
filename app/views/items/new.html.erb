@@ -11,7 +11,12 @@
     </div>
     <%= f.collection_select(:place_category_id, PlaceCategory.all, :id, :name, {}, {class:"place_category-select"}) %>
     <div class="weight-bold-text">
-      備考メモ
+      買い物リストへ保存
+      <span class="dispensable">任意</span>
+    </div>
+    <%= f.check_box :shopping %>
+    <div class="weight-bold-text">
+      備考欄
       <span class="dispensable">任意</span>
     </div>
     <%= f.text_area :memo, class:"text", placeholder:"備考欄(任意記載)" %>

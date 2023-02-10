@@ -27,15 +27,9 @@
       <%= link_to new_item_path, class: "item-btn" do %>
         在庫リストに<br>商品を登録
       <% end %>
-      <%= link_to new_shopping_path, class: "shopping-save-btn" do %>
-        買い物メモを<br>作成する
-      <% end %>
     <% else %>
       <%= link_to "#", class: "item-btn" do %>
         在庫リストに<br>商品を登録<br>
-      <% end %>
-        <<%= link_to "#", class: "shopping-save-btn" do %>
-        買い物メモを<br>作成する
       <% end %>
     <% end %>
   </div>
@@ -52,7 +46,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 2 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, "#", class:"item-name"  %></span>
+              <span><%= link_to item.name, edit_item_path(item.id), class:"item-name"  %></span>
             <% else %>
               <p><%= "" %></p>
             <% end %>
@@ -70,7 +64,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 3 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, "#", class:"item-name"  %></span>
+              <span><%= link_to item.name, edit_item_path(item.id), class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
@@ -89,7 +83,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 4 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, "#", class:"item-name"  %></span>
+              <span><%= link_to item.name, edit_item_path(item.id), class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
@@ -106,7 +100,7 @@
           <% @items.each do |item| %>
             <div class="name">
             <% if item.place_category_id == 5 && (user_signed_in? && current_user.id) == item.user_id %>
-              <span><%= link_to item.name, "#", class:"item-name"  %></span>
+              <span><%= link_to item.name, edit_item_path(item.id), class:"item-name"  %></span>
             <% end %>
             </div>
           <% end %>
@@ -114,6 +108,27 @@
       </div>
     </div>
   </div>
+  <%#/ カテゴリ別の在庫リスト部分 %>
+
+
+  <%# 買い物メモリストの部分 %>
+  <div class='shopping-contents'>
+    <div class='title'>
+      買い物メモ一覧
+    </div>
+    <div class='name'>
+      <% @items.each do |item| %>
+        <% if (user_signed_in? && current_user.id == item.user_id) && (item.shopping == true)%>  <%#ログインしてて、ログインユーザー登録したアイテムだけで、尚且つチェックボックスにチェックをつけたアイテムだけ %>
+            <%= "◆#{item.name}" %><br>
+        <% end %>
+      <% end %>
+      <%= form_with model: @item, url:items_path, local: true do |f| %>
+        <%= f.submit "更新して買い物を終わる" ,class:"btn" %>
+      <% end %>
+    </div>
+  </div>
+  <%#/ 買い物メモリストの部分 %>
+
 </div>
 
 
