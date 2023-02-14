@@ -119,7 +119,7 @@
     <div class='name'>
       <% @items.each do |item| %>
         <% if (user_signed_in? && current_user.id == item.user_id) && (item.shopping == true)%>  <%#ログインしてて、ログインユーザー登録したアイテムだけで、尚且つチェックボックスにチェックをつけたアイテムだけ %>
-          ● <%= link_to item.name, edit_item_path(item.id) %><br>
+        ■ <%= link_to item.name, edit_item_path(item.id), class:"shopping-item-name" %><br>
         <% end %>
       <% end %>
     </div>
