@@ -18,6 +18,23 @@
   <% end %>
   <%# /画面上部の「効率よくお買い物」の帯部分  %>
 
+
+  <%# 買い物メモリストの部分 %>
+  <div class='shopping-contents'>
+    <div class='title'>
+      買い物メモ一覧
+    </div>
+    <div class='name'>
+      <% @items.each do |item| %>
+        <% if (user_signed_in? && current_user.id == item.user_id) && (item.shopping == true)%>  <%#ログインしてて、ログインユーザー登録したアイテムだけで、尚且つチェックボックスにチェックをつけたアイテムだけ %>
+        ■ <%= link_to item.name, edit_item_path(item.id), class:"shopping-item-name" %><br>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <%#/ 買い物メモリストの部分 %>
+
+
   <%# 在庫アイテム一覧の上部 %>
   <div class='item-contents'>
     <h2 class='title'>
@@ -109,22 +126,6 @@
     </div>
   </div>
   <%#/ カテゴリ別の在庫リスト部分 %>
-
-
-  <%# 買い物メモリストの部分 %>
-  <div class='shopping-contents'>
-    <div class='title'>
-      買い物メモ一覧
-    </div>
-    <div class='name'>
-      <% @items.each do |item| %>
-        <% if (user_signed_in? && current_user.id == item.user_id) && (item.shopping == true)%>  <%#ログインしてて、ログインユーザー登録したアイテムだけで、尚且つチェックボックスにチェックをつけたアイテムだけ %>
-        ■ <%= link_to item.name, edit_item_path(item.id), class:"shopping-item-name" %><br>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <%#/ 買い物メモリストの部分 %>
 
 </div>
 

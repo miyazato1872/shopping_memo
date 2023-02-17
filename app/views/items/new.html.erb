@@ -1,31 +1,34 @@
-<%= form_with model: @item, url:items_path, local: true do |f| %>
-  <div class="new-item">
-    <div class="weight-bold-text">
-      アイテム名
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_field :name, class:"name", placeholder:"アイテム名" %>
-    <div class="weight-bold-text">
-      カテゴリ
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.collection_select(:place_category_id, PlaceCategory.all, :id, :name, {}, {class:"place_category-select"}) %>
-    <div class="weight-bold-text">
-      買い物リストへ保存
-      <span class="dispensable">任意</span>
-    </div>
-    <%= f.check_box :shopping %>
-    <div class="weight-bold-text">
-      備考欄
-      <span class="dispensable">任意</span>
-    </div>
-    <%= f.text_area :memo, class:"text", placeholder:"備考欄(任意記載)" %>
-    <%= f.submit "登録する" ,class:"btn" %>
-  </div>
-
-  <div class="item-footer-bar">
-    <%= link_to root_path, class: "return-btn" do %>
-        登録せずに前の画面に戻る
+<div class="new-item">
+  <div class="new-maim">
+    <%= form_with model: @item, url:items_path, class: "form", local: true do |f| %>
+      <div class="weight-bold-text">
+        アイテム名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :name, class:"name", class: "input-form" %>
+      <div class="weight-bold-text" >
+        カテゴリ
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:place_category_id, PlaceCategory.all, :id, :name, {}, { class: "input-form",}) %>
+      <div class="weight-bold-text">
+        買い物リストへ追加
+        <span class="dispensable">任意</span>
+      </div>
+      <%= f.check_box :shopping, class: "input-form"%>
+      <div class="weight-bold-text">
+        アイテムの詳細内容
+        <span class="dispensable">任意</span>
+      </div>
+      <%= f.text_area :memo,  class: "input-form" %>
+      <div class="form-btn">
+        <%= f.submit "登録する" ,class:"btn" %>
+      </div>
+      <div class="item-footer-bar">
+        <%= link_to root_path, class: "return-btn" do %>
+            登録せずに前の画面に戻る
+        <% end %>
+      </div>
     <% end %>
   </div>
-<% end %>
+</div>

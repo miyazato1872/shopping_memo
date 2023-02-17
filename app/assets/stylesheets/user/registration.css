@@ -49,6 +49,7 @@
   font-weight: bold;
 }
 
+/* アイテム登録画面でも併用 */
 .indispensable {
     background: #ea352d;
     margin-left: 8px;
