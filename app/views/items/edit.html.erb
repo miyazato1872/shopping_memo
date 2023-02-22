@@ -1,16 +1,19 @@
-<div class="weight-bold-text">
-  <%= "✔︎をつけたら【#{@item.name}】を買い物メモに追加" %><br>
-  <%= "✔︎を外したら【#{@item.name}】を買い物メモから削除" %>
-</div>
+<div class="edit-item">
+  <div class="center-block">
+    <div class="edit-check">
+      <%= @item.name %><br>
+      <%= "✔︎をつけたら買い物メモに追加" %><br>
+      <%= "✔︎を外したら買い物メモから削除" %>
+      <%= form_with model: @item, local: true do |f| %>
+        <%= f.check_box :shopping %><br>
+        <%= f.submit "更新する" ,class:"btn" %>
+      <% end %>
+    </div>
 
-
-<%= form_with model: @item, local: true do |f| %>
-  <%= f.check_box :shopping %>
-  <%= f.submit "更新" ,class:"btn" %>
-<% end %><br>
-
-<div class="item-footer-bar">
-  <%= link_to root_path, class: "return-btn" do %>
-      前の画面に戻る
-  <% end %>
+    <div class="edit-footer-bar">
+      <%= link_to root_path, class: "return-btn" do %>
+          前の画面に戻る
+      <% end %>
+    </div>
+  </div>
 </div>

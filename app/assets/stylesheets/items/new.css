@@ -37,11 +37,11 @@
   font-size: 110%;
   padding: 3%;
   margin-bottom: 2px;
-  text-decoration:underline #000000;
+  /* text-decoration:underline #000000; */
   
 }
 
-.item-footer-bar{
+.item-footer-bar{   
   margin-top: 30px;
   /* background-color: rgb(198, 169, 225); */
 }
@@ -64,6 +64,6 @@
 }
 
 .input-checkbox[type=checkbox] {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
