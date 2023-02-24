@@ -43,7 +43,7 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 
 # データベース設計(ER図)
-[![Image from Gyazo](https://i.gyazo.com/de8daedec0efe49f83f3d802978f80be.png)](https://gyazo.com/de8daedec0efe49f83f3d802978f80be)
+[![Image from Gyazo](https://i.gyazo.com/e6956ae9e4af40ac23c204898d0afd36.png)](https://gyazo.com/e6956ae9e4af40ac23c204898d0afd36)
 
 # 画面遷移図
 - 献立機能については追加実装のため遷移図に記載しておりません  
