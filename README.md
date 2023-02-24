@@ -106,17 +106,17 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 
 ## recipes テーブル
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| author_id     | integer    | null: false                    |
-| category_id   | integer    | null: false                    |
-| genre_id      | integer    | null: false                    |
-| make          | text       |                                |
-| reference_url | string     |                                |
-| cook_time     | string     |                                |
-| other_time    | string     |                                |
-| user          | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| author_id          | integer    | null: false                    |
+| food_category_id   | integer    | null: false                    |
+| food_genre_id      | integer    | null: false                    |
+| make               | text       |                                |
+| reference_url      | string     |                                |
+| cook_time          | string     |                                |
+| other_time         | string     |                                |
+| user               | references | null: false, foreign_key: true |
 
 
 ### Association
