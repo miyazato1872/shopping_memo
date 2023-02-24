@@ -86,7 +86,7 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 ### Association
 - has_many :items
-- has_many :menus
+- has_many :recipes
 - has_one_attached :image
 
 ## items テーブル
@@ -105,40 +105,48 @@ https://docs.google.com/spreadsheets/d/1q6Yc2i6JEUnPgEhnpII-sUOQq9ODcdM79aYRgUm-
 
 
 
-## menus テーブル
+## recipes テーブル
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | title         | string     | null: false                    |
-| recipe_link   | text       | null: false                    |
-| main_genre_id | integer    | null: false                    |
+| author_id     | integer    | null: false                    |
+| category_id   | integer    | null: false                    |
+| genre_id      | integer    | null: false                    |
+| make          | text       |                                |
+| reference_url | string     |                                |
+| cook_time     | string     |                                |
+| other_time    | string     |                                |
 | user          | references | null: false, foreign_key: true |
+
 
 ### Association
 - belongs_to :user
-- has_many :menu_tags
-- has_many :tags, through: :menu_tags
+- has_many :recipe_ingredients
+- has_many :ingredients, through: :recipe_ingredients    
+extend ActiveHash::Associations::ActiveRecordExtensions
+- belongs_to :author
+- belongs_to :category
+- belongs_to :genre
 
 
-## menu_tags テーブル(中間テーブル)
+## recipe_ingredients テーブル(中間テーブル)
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| menu          | references | null: false, foreign_key: true |
-| tag           | references | null: false, foreign_key: true |
+| recipes       | references | null: false, foreign_key: true |
+| ingredients   | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :menu
-- belongs_to :tag
+- belongs_to :recipes
+- belongs_to :ingredients
 
 
-## tags テーブル
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| recipe_link   | text       | null: false                    |
-| main_genre_id | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
+## ingredients テーブル
+| Column        | Type      | Options                        |
+| ------------- | --------- | ------------------------------ |
+| name         | string     | null: false                    |
+| quantity     | string     | null: false                    |
 
 ### Association
-- has_many :menu_tags
-- has_many :menus, through: :menu_tags
+- has_many :recipe_ingredients
+- has_many :recipes, through: :recipe_ingredients
 
