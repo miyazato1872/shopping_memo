@@ -3,8 +3,8 @@
     <%= link_to image_tag("ic-logo.png", class:"ic-icon"), "/" %>
     <ul class='lists'>
       <li><%= link_to 'アイテム一覧', "#", class: "item-list-btn" %></li>
-      <li><%= link_to '買い物メモ一覧', shoppings_path, class: "shopping-list-btn" %></li>
-      <li><%= link_to '献立カレンダー', "#", class: "menu-list-btn" %></li>      
+      <li><%= link_to 'レシピ投稿', new_recipe_path, class: "shopping-list-btn" %></li>
+      <li><%= link_to '献立カレンダー', recipes_path, class: "menu-list-btn" %></li>      
     <% if user_signed_in? %>
       <li><%= link_to current_user.nickname + "さん", "#", class: "user-nickname" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
